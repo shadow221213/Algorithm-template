@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-10-09 19:31:02
- * @LastEditTime: 2023-10-24 19:22:55
+ * @LastEditTime: 2023-10-24 19:47:47
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -98,4 +98,5 @@ signed main( ) {
     cout << num.sumRange(0, 2) << endl;
 }
 
+// 例题：
 // 307. 区域和检索 - 数组可修改

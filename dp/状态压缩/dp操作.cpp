@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-10-17 21:52:20
- * @LastEditTime: 2023-10-22 02:29:17
+ * @LastEditTime: 2023-10-24 19:48:09
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -30,5 +30,6 @@ while(cnt) {
 }
 */
 
+// 例题：
 // 1681. 最小不兼容性
 // 1494.并行课程 II

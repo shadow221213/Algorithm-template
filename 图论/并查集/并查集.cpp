@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-10-22 02:25:12
- * @LastEditTime: 2023-10-24 19:29:33
+ * @LastEditTime: 2023-10-24 19:47:59
  */
 #pragma GCC optimize(2)
 #pragma GCC optimize(3)
@@ -56,4 +56,5 @@ public:
     }
 };
 
+// 例题：
 // 2316.统计无向图中无法互相到达点对数
