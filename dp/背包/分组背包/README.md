@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-10-24 19:33:32
- * @LastEditTime: 2023-10-24 19:37:47
+ * @LastEditTime: 2023-10-24 19:39:22
 -->
 满足：组内物品有且仅有一个
 
