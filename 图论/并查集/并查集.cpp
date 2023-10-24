@@ -4,9 +4,6 @@
  * @Date: 2023-10-22 02:25:12
  * @LastEditTime: 2023-10-24 19:47:59
  */
-#pragma GCC optimize(2)
-#pragma GCC optimize(3)
-#pragma GCC optimize("Ofast")
 #include <bits/stdc++.h>
 using namespace std;
 
