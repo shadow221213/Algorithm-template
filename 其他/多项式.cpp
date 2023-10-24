@@ -3,7 +3,19 @@
 #define all(x) x.begin(), x.end()
 
 using namespace std;
+using ui = unsigned int;
 using poly = vector<int>;
+
+//求前导0的数量
+inline int clz(ui x) {
+    int r = 0;
+    if( !(x & 0xFFFF0000) ) { r += 16; x <<= 16; }
+    if( !(x & 0xFF000000) ) { r += 8; x <<= 8; }
+    if( !(x & 0xF0000000) ) { r += 4; x <<= 4; }
+    if( !(x & 0xC0000000) ) { r += 2; x <<= 2; }
+    if( !(x & 0x80000000) ) { r += 1; x <<= 1; }
+    return r;
+}
 
 namespace Poly {
     struct loop {
@@ -264,7 +276,8 @@ namespace Poly {
         d = Integral(d);
         return d;
     }
-    inline poly MultiPoint(poly f, poly g) { //多点取值
+    // 多点取值
+    inline poly MultiPoint(poly f, poly g) {
         int n = max(f.size( ), g.size( )), m = g.size( );
         f.resize(n);
         g.resize(n);
@@ -335,7 +348,7 @@ namespace Poly {
         c = ifdt(c, n);
         return c;
     }
-    //结果为C[1]
+    // 结果为C[1]
     inline void FDTto(const poly& a, const int& p, const int& l, const int& r) {
         if( l == r ) {
             B[p] = poly({ P - l , 1 });
@@ -348,7 +361,7 @@ namespace Poly {
         B[p] = B[p << 1] * B[p << 1 | 1];
         C[p] = C[p << 1] + C[p << 1 | 1] * B[p << 1];
     }
-    //b从1读入
+    // b从1读入
     inline void CDQ(poly& a, const poly& b, int l, int r) {
         if( l + 1 == r ) return;
         int mid = l + r >> 1;
@@ -389,7 +402,7 @@ namespace Poly {
             ans = i & 1 ? sub(ans, mul(fac[n - i], g[i])) : sum(ans, mul(fac[n - i], g[i]));
         return ans;
     }
-    //ex时预处理
+    // ex时预处理
     inline void initInv(const int& n) {
         inv[0] = inv[1] = 1;
         for( int i = 2; i <= n; i++ )

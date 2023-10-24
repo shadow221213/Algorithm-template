@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-10-09 19:31:02
- * @LastEditTime: 2023-10-22 02:27:25
+ * @LastEditTime: 2023-10-24 19:22:55
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -50,7 +50,7 @@ public:
 
         int mid = start + end >> 1;
         pushDown(root, mid - start + 1, end - mid);
-        // cout << root.l << endl << root.r << endl;
+
         if( l <= mid ) update((*root.l), start, mid, l, r, val);
         if( r > mid ) update((*root.r), mid + 1, end, l, r, val);
 

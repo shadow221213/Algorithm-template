@@ -7,9 +7,9 @@
 
 using namespace std;
 using ll = long long;
-using ld = long double;	//%Lf
+using ld = long double;	// %Lf
 using ui = unsigned int;
-using ull = unsigned long long;	//%llu
+using ull = unsigned long long;	// %llu
 using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 
@@ -22,8 +22,8 @@ using pll = pair<ll, ll>;
 #define Mul(x) accumulate(all(x), 1, multiplies<ll>())
 #define Max(x,n) max_element((x)+1, (x)+(n)+1) - (x)
 #define Min(x,n) min_element((x)+1, (x)+(n)+1) - (x)
-#define low(x,a) lower_bound(all(x), (a)) //>=a的第一个元素
-#define upp(x,a) upper_bound(all(x), (a)) //>a的第一个元素
+#define low(x,a) lower_bound(all(x), (a)) // >=a的第一个元素
+#define upp(x,a) upper_bound(all(x), (a)) // >a的第一个元素
 #define vclr(x,n) for(int i = 0; i <= n; i++) x[i].clear();
 
 const ll LLF = 9e18;
@@ -103,7 +103,7 @@ clock_t startTime, testTime;
 inline double getCurrentTime( ) { return ( double )(clock( ) - startTime) * 1000 / CLOCKS_PER_SEC; }
 inline ll lowbit(ll x) { return x & (-x); }
 inline ull pow2(int i) { return 1ull << i; }
-inline int ctz(ui x) { //求末尾0的数量
+inline int ctz(ui x) { // 求末尾0的数量
     if( !x ) return 32;
     int r = 31;
     x &= ~x + 1;
@@ -114,7 +114,7 @@ inline int ctz(ui x) { //求末尾0的数量
     if( x & 0x55555555 ) r -= 1;
     return r;
 }
-inline int ctzll(ull x) { //求末尾0的数量
+inline int ctzll(ull x) { // 求末尾0的数量
     if( !x ) return 64;
     int r = 63;
     x &= ~x + 1;
@@ -126,7 +126,7 @@ inline int ctzll(ull x) { //求末尾0的数量
     if( x & 0x5555555555555555 ) r -= 1;
     return r;
 }
-inline int clz(ui x) { //求前导0的数量
+inline int clz(ui x) { // 求前导0的数量
     int r = 0;
     if( !(x & 0xFFFF0000) ) { r += 16; x <<= 16; }
     if( !(x & 0xFF000000) ) { r += 8; x <<= 8; }
@@ -135,7 +135,7 @@ inline int clz(ui x) { //求前导0的数量
     if( !(x & 0x80000000) ) { r += 1; x <<= 1; }
     return r;
 }
-inline int clzll(ull x) { //求前导0的数量
+inline int clzll(ull x) { // 求前导0的数量
     int r = 0;
     if( !(x & 0xFFFFFFFF00000000) ) { r += 32; x <<= 32; }
     if( !(x & 0xFFFF000000000000) ) { r += 16; x <<= 16; }
@@ -145,7 +145,7 @@ inline int clzll(ull x) { //求前导0的数量
     if( !(x & 0x8000000000000000) ) { r += 1; x <<= 1; }
     return r;
 }
-inline ull gcd(ull a, ull b) { //调用前需fabs
+inline ull gcd(ull a, ull b) { // 调用前需fabs
     if( !a ) return b;
     if( !b ) return a;
     ull c = ctzll(a | b);
