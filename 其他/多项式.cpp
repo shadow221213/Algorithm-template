@@ -1,3 +1,9 @@
+/*
+ * @Description:
+ * @Author: shadow221213
+ * @Date: 2023-10-17 21:52:20
+ * @LastEditTime: 2023-10-22 02:29:17
+ */
 #include<bits/stdc++.h>
 
 #define all(x) x.begin(), x.end()
@@ -6,7 +12,7 @@ using namespace std;
 using ui = unsigned int;
 using poly = vector<int>;
 
-//求前导0的数量
+// 求前导0的数量
 inline int clz(ui x) {
     int r = 0;
     if( !(x & 0xFFFF0000) ) { r += 16; x <<= 16; }
