@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.markdown": "markdown",
+        "*.md": "markdown",
+        "bitset": "cpp",
+        "string_view": "cpp"
+    }
+}
