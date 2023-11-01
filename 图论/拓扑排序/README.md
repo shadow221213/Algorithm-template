@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-11-01 13:56:45
- * @LastEditTime: 2023-11-01 14:04:18
+ * @LastEditTime: 2023-11-01 14:42:59
 -->
 # <div align="center">分组背包</div>
 
@@ -25,5 +25,4 @@
 以入度为0的点作为起始点，做BFS
 
 ## 例题：
-
 *2127. 参加会议的最多员工数*
