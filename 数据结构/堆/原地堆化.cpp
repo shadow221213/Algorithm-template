@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-10-28 19:26:25
- * @LastEditTime: 2023-10-28 19:40:44
+ * @LastEditTime: 2023-11-02 15:28:08
  */
 
 #include <bits/stdc++.h>
@@ -28,6 +28,3 @@ public:
         return Sum(gifts);
     }
 };
-
-// 例题：
-// 2558. 从数量最多的堆取走礼物
