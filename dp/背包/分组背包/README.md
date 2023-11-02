@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-10-24 19:33:32
- * @LastEditTime: 2023-11-01 14:43:09
+ * @LastEditTime: 2023-11-02 16:02:22
 -->
 # <div align="center">分组背包</div>
 
@@ -27,7 +27,7 @@
 dp[i][j] 表示前 i 个物品组，凑成价值为 j 的方案数，常见 dp[0][0] = 1
 
 ### 基本思路：
-```
+``` C++
 for 枚举物品组	
     for 枚举容量
         for 枚举决策
