@@ -97,6 +97,3 @@ signed main( ) {
     num.update(0, 2);
     cout << num.sumRange(0, 2) << endl;
 }
-
-// 例题：
-// 307. 区域和检索 - 数组可修改

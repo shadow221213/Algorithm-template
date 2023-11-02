@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-10-22 02:25:12
- * @LastEditTime: 2023-10-24 19:47:59
+ * @LastEditTime: 2023-11-02 15:12:22
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -11,30 +11,30 @@ using namespace std;
 
 class unionFind {
 private:
-    vector<int> parents, sizes;
+    vector<int> fa, sz;
 public:
-    unionFind(int n): parents(n), sizes(n, 1) {
-        iota(all(parents), 0);
+    unionFind(int n): fa(n), sz(n, 1) {
+        iota(all(fa), 0);
     }
     int find(int x) {
-        if( parents[x] == x ) return x;
-        else return parents[x] = find(parents[x]);
+        if( fa[x] == x ) return x;
+        else return fa[x] = find(fa[x]);
     }
     void push(int x, int y) {
         int rx = find(x), ry = find(y);
         if( rx != ry ) {
-            if( sizes[rx] > sizes[ry] ) {
-                parents[ry] = rx;
-                sizes[rx] += sizes[ry];
+            if( sz[rx] > sz[ry] ) {
+                fa[ry] = rx;
+                sz[rx] += sz[ry];
             }
             else {
-                parents[rx] = ry;
-                sizes[ry] += sizes[rx];
+                fa[rx] = ry;
+                sz[ry] += sz[rx];
             }
         }
     }
     int getSize(int x) {
-        return sizes[x];
+        return sz[x];
     }
 };
 
@@ -52,6 +52,3 @@ public:
         return res / 2;
     }
 };
-
-// 例题：
-// 2316.统计无向图中无法互相到达点对数
