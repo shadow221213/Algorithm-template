@@ -2,13 +2,13 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-11-01 13:56:45
- * @LastEditTime: 2023-11-04 15:16:22
+ * @LastEditTime: 2023-11-04 15:36:11
 -->
-# <div align="center">0-1字典树</div>
+# <div align="center">01字典树</div>
 
 <!-- TOC -->
 
-- [0-1字典树](#0-1字典树)
+- [01字典树](#01字典树)
   - [方法：](#方法)
     - [用途：](#用途)
   - [例题：](#例题)
