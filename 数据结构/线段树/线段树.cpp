@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-10-09 19:31:02
- * @LastEditTime: 2023-10-24 19:47:47
+ * @LastEditTime: 2023-11-04 14:44:31
  */
 #include <bits/stdc++.h>
 using namespace std;
@@ -14,22 +14,22 @@ const int mod = 1e9 + 7;
 class SegTree {
 private:
     struct node {
-        node* l;
-        node* r;
+        node *l;
+        node *r;
         int val;
         int lazy;
 
-        node(node* _l = NULL, node* _r = NULL, int _val = 0, int _lazy = 0): l(_l), r(_r), val(_val), lazy(_lazy) { }
+        node(node *_l = nullptr, node *_r = nullptr, int _val = 0, int _lazy = 0): l(_l), r(_r), val(_val), lazy(_lazy) { }
     };
 public:
     node root; // 需要外部调用根节点
-    SegTree(int _val = 0): root(NULL, NULL, _val, 0) { }
-    void pushUp(node& root) {
+    SegTree(int _val = 0): root(nullptr, nullptr, _val, 0) { }
+    void pushUp(node &root) {
         root.val = (*root.l).val + (*root.r).val;
     }
-    void pushDown(node& root, int l, int r) {
-        if( root.l == NULL ) root.l = new node;
-        if( root.r == NULL ) root.r = new node;
+    void pushDown(node &root, int l, int r) {
+        if( root.l == nullptr ) root.l = new node;
+        if( root.r == nullptr ) root.r = new node;
 
         if( root.lazy == 0 ) return;
 
@@ -40,7 +40,7 @@ public:
         (*root.r).lazy += root.lazy;
         root.lazy = 0;
     }
-    void update(node& root, int start, int end, int l, int r, int val) {
+    void update(node &root, int start, int end, int l, int r, int val) {
         if( l <= start && end <= r ) {
             // 在此处修改区间[l, r]的值
             root.val = (end - start + 1) * val;
@@ -56,7 +56,7 @@ public:
 
         pushUp(root);
     }
-    int query(node& root, int start, int end, int l, int r) {
+    int query(node &root, int start, int end, int l, int r) {
         if( l <= start && end <= r ) return root.val;
 
         int mid = (start + end) >> 1, ans = 0;
@@ -74,7 +74,7 @@ private:
     int n;
     SegTree seg;
 public:
-    NumArray(vector<int>& nums) {
+    NumArray(vector<int> &nums) {
         n = nums.size( ) - 1;
 
         for( int i = 0; i <= n; i++ )
