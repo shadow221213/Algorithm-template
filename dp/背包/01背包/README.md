@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-10-24 19:33:32
- * @LastEditTime: 2023-11-04 17:05:06
+ * @LastEditTime: 2023-11-04 17:25:47
 -->
 # <div align="center">01背包</div>
 
@@ -66,3 +66,5 @@ for 枚举物品
 
 ## 例题：
 *416. 分割等和子集*
+
+*1049. 最后一块石头的重量 II*
