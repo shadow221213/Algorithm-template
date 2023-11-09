@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-10-24 18:46:33
- * @LastEditTime: 2023-11-07 19:41:58
+ * @LastEditTime: 2023-11-09 15:19:21
 -->
 # <div align="center">算法模板</div>
 
@@ -35,3 +35,4 @@
   - [ACM](./其他/ACM.docx)
   - [多项式](./其他/多项式.cpp)
   - [对数器](./其他/对数器.cpp)
+  - [函数内递归](./其他/函数内递归.cpp)
