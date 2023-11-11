@@ -1,3 +1,9 @@
+/*
+ * @Description:
+ * @Author: shadow221213
+ * @Date: 2023-11-01 14:21:02
+ * @LastEditTime: 2023-11-11 19:56:51
+ */
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -15,9 +21,9 @@ public:
     void addEdge(int u, int v, int w) {
         g[u].push_back({ v, w }); // u->v
     }
-    vector<int> loop( ) {
+    int loop( ) {
+        int ans = 0;
         vector<bool> vis(n, false);
-        vector<int> circles;
 
         for( int i = 0; i < n; i++ ) {
             if( vis[i] ) continue;
@@ -34,13 +40,14 @@ public:
             int m = cir.size( );
             for( int k = 0; k < m; k++ ) {
                 if( cir[k] == j ) {
-                    circles.push_back(sz);
+                    // 求解最大环
+                    ans = max(ans, sz);
                     break;
                 }
                 else sz -= g[cir[k]][0].second;
             }
         }
 
-        return circles;
+        return ans;
     }
 };
