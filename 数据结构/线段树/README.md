@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-11-01 13:56:45
- * @LastEditTime: 2023-11-02 15:23:43
+ * @LastEditTime: 2023-11-14 16:48:02
 -->
 # <div align="center">线段树</div>
 
@@ -22,3 +22,5 @@
 
 ## 例题：
 *307. 区域和检索 - 数组可修改*
+
+*715. Range 模块*
