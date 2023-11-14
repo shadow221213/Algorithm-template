@@ -2,7 +2,7 @@
  * @Description:
  * @Author: shadow221213
  * @Date: 2023-11-14 18:18:58
- * @LastEditTime: 2023-11-14 20:04:30
+ * @LastEditTime: 2023-11-14 20:05:13
  */
 
 #include <bits/stdc++.h>
@@ -10,11 +10,12 @@ using namespace std;
 
 const int M = 1e9 + 5;
 
-class Floyd {
-public:
+class Dijkstra {
+private:
+    int n;
     vector<vector<int>> g;
-
-    Floyd(int n) {
+public:
+    Dijkstra(int _n): n(_n) {
         g.resize(n, vector<int>(n, M));
         for( int i = 0; i < n; i++ )
             g[i][i] = 0;
@@ -25,31 +26,39 @@ public:
             g[from][to] = g[to][from] = w;
         }
     }
-    void floyd( ) {
-        int n = g.size( );
-        for( int p = 0; p < n; p++ )
+    vector<int> dijkstra(int x) {
+        vector<int> dis(n, M);
+        vector<bool> vis(n, false);
+
+        dis[x] = 0;
+        for( int k = 0; k < n; k++ ) {
+            int t = -1;
             for( int i = 0; i < n; i++ )
-                for( int j = 0; j < n; j++ )
-                    g[i][j] = min(g[i][j], g[i][p] + g[p][j]);
+                if( !vis[i] && (t == -1 || dis[i] < dis[t]) ) t = i;
+
+            vis[t] = true;
+            for( int i = 0; i < n; i++ )
+                dis[i] = min(dis[i], dis[t] + g[t][i]);
+        }
+
+        return dis;
     }
 };
 
 class Solution {
 public:
     int findTheCity(int n, vector<vector<int>> &edges, int distanceThreshold) {
-        Floyd floyd(n);
-        floyd.add(edges);
-        floyd.floyd( );
+        Dijkstra dij(n);
+        dij.add(edges);
 
         int ans = -1, cnt = M;
         for( int i = 0; i < n; i++ ) {
+            vector<int> dis = dij.dijkstra(i);
             int cur = 0;
-            for( int j = 0; j < n; j++ )
-                if( i != j && floyd.g[i][j] <= distanceThreshold ) cur++;
+            for( auto &d : dis )
+                if( d <= distanceThreshold ) cur++;
 
-            cout << cur << endl;
-
-            if( cnt >= cur ) {
+            if( cur <= cnt ) {
                 cnt = cur;
                 ans = i;
             }

@@ -4,14 +4,7 @@
  * @Date: 2023-11-14 18:18:58
  * @LastEditTime: 2023-11-14 19:53:08
  */
- /*
-  * @lc app=leetcode.cn id=1334 lang=cpp
-  *
-  * [1334] 阈值距离内邻居最少的城市
-  */
 
-  // @lc code=start
- //edit by shadow221213
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -69,12 +62,8 @@ public:
         for( int i = 0; i < n; i++ ) {
             vector<int> dis = dij.dijkstra(i);
             int cur = 0;
-            for( auto &d : dis ) {
-                cout << d << endl;
+            for( auto &d : dis )
                 if( d <= distanceThreshold ) cur++;
-            }
-
-            cout << endl;
 
             if( cnt >= cur ) {
                 cnt = cur;

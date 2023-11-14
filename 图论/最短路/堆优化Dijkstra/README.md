@@ -2,13 +2,13 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-11-01 13:56:45
- * @LastEditTime: 2023-11-14 19:57:12
+ * @LastEditTime: 2023-11-14 20:09:06
 -->
-# <div align="center">堆优化的Dijkstra</div>
+# <div align="center">堆优化Dijkstra</div>
 
 <!-- TOC -->
 
-- [堆优化的Dijkstra](#堆优化的dijkstra)
+- [堆优化Dijkstra](#堆优化dijkstra)
   - [方法：](#方法)
     - [基本思路：](#基本思路)
     - [复杂度](#复杂度)
@@ -23,7 +23,7 @@
 堆优化`Dijkstra`算法通过优先队列（堆）来优化朴素`Dijkstra`中的“找`dis`值最小的点”的过程。
 
 ### 复杂度
-> 时间复杂度为$O(m\times log\ n)$
+> 时间复杂度为$O(m\times log\ n)$，$n$为节点个数，$m$为边的个数
 
 > 空间复杂度为$O(n)$
 
