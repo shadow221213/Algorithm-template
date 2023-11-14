@@ -10,6 +10,10 @@
         "new": "cpp",
         "random": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "*.tcc": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "valarray": "cpp"
     }
 }
