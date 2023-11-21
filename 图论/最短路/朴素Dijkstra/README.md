@@ -2,13 +2,14 @@
  * @Description: 
  * @Author: shadow221213
  * @Date: 2023-11-01 13:56:45
- * @LastEditTime: 2023-11-14 20:06:59
+ * @LastEditTime: 2023-11-21 21:59:38
 -->
 # <div align="center">朴素Dijkstra</div>
 
 <!-- TOC -->
 
 - [朴素Dijkstra](#朴素dijkstra)
+  - [代码](#代码)
   - [方法：](#方法)
     - [基本思路：](#基本思路)
     - [复杂度](#复杂度)
@@ -16,6 +17,9 @@
   - [例题：](#例题)
 
 <!-- /TOC -->
+
+## 代码
+> [点击此处](./Dijkstra.cpp)
 
 ## 方法：
 
